@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="RelationsTest" transaction-type="RESOURCE_LOCAL">
+		<!-- com.kodecamp.persist.college; -->
+ <!--    <class>com.kodecamp.persist.college.College</class> -->
+    <class>entites.StudentEntity</class>
+    
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+      <!--            <property name="javax.persistence.jdbc.url"
+            value="jdbc:h2:tcp://localhost/~/collegeappdb" />-->
+      <property name="javax.persistence.jdbc.url"
+	value="jdbc:h2:tcp://localhost/~/newpersisttestdb" />
+      <property name="javax.persistence.jdbc.user" value="test"/>
+      <property name="javax.persistence.jdbc.password" value="test"/>
+      <!-- EclipseLink should create the database schema automatically -->
+      <!-- valid values are : drop-and-create-tables,create-tables -->
+      <!-- NOTE : REMOVE THIS LINE AFTER FIRST RUN -->
+<!-- 	<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/> -->
+      <!-- valid values : database,sql-script, both-->
+      <property name="eclipselink.ddl-generation.output-mode" value="both"/>
+      <property name="eclipselink.logging.level.sql" value="FINE"/>
+      <property name="eclipselink.logging.parameters" value="true"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="">
+  
+  </persistence-unit>
+</persistence>
